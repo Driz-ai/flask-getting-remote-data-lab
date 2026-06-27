@@ -1,69 +1,48 @@
-# Getting Remote Data Lab
+# GetRequester Project
 
-## The Scenario 
-It is time to practice building out your own class for retrieving remote data. In this lab, you are tasked with building a generic GetRequester class. This class will be able to take in a URL on initialization and send an HTTP GET request on command. You will also need to build a method for dealing with requests that return JSON.
+## 📌 Project Overview
 
-## Tools and Resources 
-- [GitHub Repo](https://github.com/learn-co-curriculum/flask-getting-remote-data-lab)
-- [GET - Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET)
-- [HTTP methods - Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
-- [requests](https://requests.readthedocs.io/en/latest/)
-- [Python JSON](https://docs.python.org/3/library/json.html)
+This project demonstrates how to fetch data from a remote API endpoint using Python, then convert the returned JSON response into usable Python data structures.
 
-## Instructions
+It uses the `requests` library to make HTTP GET requests and the built-in `json` module to parse the response.
 
-### Set Up
+---
 
-Before we begin coding, let's complete the initial setup for this lesson: 
+## 🚀 Features
 
-* Fork and Clone
-  * For this lesson, you will need the following GitHub Repo:
-  * Go to the provided GitHub repository link.
-  * Fork the repository to your GitHub account.
-  * Clone the forked repository to your local machine.
-* Open and Run File
-  * Open the project in VSCode.
-  * Run pipenv install to install all necessary dependencies.
-  * Run pipenv shell to open instance of python shell
+- Sends a GET request to a remote URL
+- Retrieves raw response data
+- Converts JSON response into Python objects (lists/dictionaries)
+- Includes automated tests to verify functionality
 
-### Task 1: Define the Problem
+---
 
-* Build a class to interact with api
-* Get the data
-* Convert to json data
+## 🧠 How It Works
 
-### Task 2: Determine the Design
+The `GetRequester` class:
 
-* Endpoint: https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json.
-  * ```get_response_body```
-    * Query endpoint
-  * ```load_json```
-    * Convert to json data
+1. Accepts a URL when initialized
+2. Fetches data from the URL using `requests.get()`
+3. Returns the raw response body (`bytes`)
+4. Converts JSON response into Python objects using `json.loads()`
 
-#### Task 3: Develop, Test, and Refine the Code
 
-* Create feature branch
-* Build get_response_body to query endpoint
-* Convert endpoint data to json and return the data
-* Push feature branch and open a PR on GitHub
-* Merge to main
+## ✅ Test Results Screenshot
 
-#### Task 4: Document and Maintain
+![Successful Test Run](./images/remote.png)
 
-Best Practice documentation steps:
-* Add comments to code to explain purpose and logic, clarifying intent / functionality of code to other developers.
-* Add screenshot of completed work included in Markdown in README.
-* Update README text to reflect the functionality of the application following https://makeareadme.com.
-* Delete any stale branches on GitHub
-* Remove unnecessary/commented out code
-* If needed, update git ignore to remove sensitive data
+---
 
-## Submission
 
-Once all tests are passing and working code is pushed to the GitHub main branch, submit your GitHub repo through Canvas using CodeGrade.
+---
 
-## Grading Criteria
+If you want, I can also:
+- rename your files to match industry standards
+- or help you turn this into a GitHub-ready submission (branch + PR description included)
 
-The application passes all test suites.
-* Get json data
-* Convert to Json
+## 📦 Installation
+
+Install required dependency:
+
+```bash
+pip install requests
